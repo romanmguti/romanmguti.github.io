@@ -7,20 +7,20 @@
   box-sizing: border-box;
 }
 
+/* removing border from block of color */
 html, body {
   margin: 0;
   padding: 0;
 }
 
-
-nav {
+/* this adjusts navigation bar */
+navigation {
   float: left;
-  width: 20%;
+  width: 25%;
   background: linear-gradient(to bottom,  #ff7400 0%,#ff7400 100%);
-  padding: 20px;
   height: 100vh;
+  text-align: center;
 }
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -28,13 +28,11 @@ ul {
   width: 200px;
   background-color: linear-gradient(to bottom,  #ff7400 0%,#ff7400 100%);
 }
-
 li a {
   display: block;
   color: white;
   padding: 8px 16px;
   text-decoration: none;
-  text-align: center;
 }
 
 /* Change the link color on hover */
@@ -44,51 +42,34 @@ li a:hover {
 }
 
 .main {
-  float: left;
-  width: 60%;
-  padding: 0 20px;
+  float: center;
+  width: 50%;
+  padding: 0 0px;
   overflow: hidden;
 }
 
-@media only screen and (max-width:800px) {
-  /* For tablets: */
-  .main {
-    width: 80%;
-    padding: 0;
-  }
-  .right {
-    width: 100%;
-  }
-}
-@media only screen and (max-width:500px) {
-  /* For mobile phones: */
-  .menu, .main, .right {
-    width: 100%;
-  }
-}
 </style>
 </head>
 <body style="font-family:Arial;">
 
 
 <section>
-  <nav>
+  <navigation>
 	<ul>
   		<li><a href="#home">stuff</a></li>
   		<li><a href="#news">stuff</a></li>
   		<li><a href="#contact">stuff</a></li>
   		<li><a href="#about">stuff</a></li>
 	</ul>
-  </nav>
+  </navigation>
 
 
 
   <div class="main">
-  <div style="background-color:white;padding:34px;">
+  <div style="background-color:white;padding:50px;">
     <h2>Roman M. Gutierrez</h2>
     <p>still under construction 
     </p>
   </div>
 
 <body/>
-
