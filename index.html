@@ -46,35 +46,11 @@ li a:hover {
   overflow: hidden;
 }
 
-/* MOBILE VERSION */
-
-@media (min-width: 768px) {
-  .desktopMain {
-    display: none;
+@media screen and (min-width: 480px) {
+  body {
+    background-color: lightgreen;
   }
-
-  .mobiMain {
-    display: flex;
-    flex-flow: column nowrap;
   }
-
-  .mobiDetails {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 2rem;
-  }
-
-  .mobiDetails p {
-      height: auto;
-      text-align: center;
-      line-height: 1.3rem;
-      font-size: 1.2rem;
-    }
-
-  }
-
 </style>
 </head>
 <body style="font-family:Arial;">
@@ -98,15 +74,6 @@ li a:hover {
     <p1 style="font-size: small;"> this is font size small</p1>
   </div>
 
-  <!-- Mobile version  -->
-  <div class="mobiMain">
-    </div>
-    <div class="mobiDetails">
-      <p>Roman M. Gutierrez</p>
-      <p>u of Missouri</p>
-      <p>ain't no holla back</p>
-    </div>
-    </div>
 
 <body/>
 
