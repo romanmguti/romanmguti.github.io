@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 * {
   box-sizing: border-box;
@@ -20,7 +21,7 @@ navigation {
   height: 100vh;
   text-align: center;
 }
-ul {
+#menulist {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -45,6 +46,10 @@ li a:hover {
   overflow: hidden;
 }
 
+@media screen and (min-width: 480px) {
+  #menulist {width: 200px; float: left;}
+  #main {margin-left: 216px;}
+}
 
 </style>
 </head>
@@ -52,14 +57,16 @@ li a:hover {
 
 <!-- this is my navigation menu -->
 <section>
-  <navigation>
-	<ul>
+  <div id="navigation">
+    <ul id="menulist">
   		<li><a href="#home">stuff</a></li>
   		<li><a href="#news">stuff</a></li>
   		<li><a href="#contact">stuff</a></li>
   		<li><a href="#about">stuff</a></li>
-	</ul>
-  </navigation>
+    </ul>
+  </div>
+
+ 
 
   <!-- this is my main text -->
   <div class="main">
