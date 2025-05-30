@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="me" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8"> <!-- always need this -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 * {
   box-sizing: border-box;
@@ -46,11 +47,40 @@ li a:hover {
   overflow: hidden;
 }
 
+/* MOBILE VERSION */
+
+@media only screen and (max-width: 768px) {
+  .desktopMain {
+    display: none;
+  }
+
+  .mobiMain {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .mobiDetails {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
+  }
+
+  .mobiDetails p {
+      height: auto;
+      text-align: center;
+      line-height: 1.3rem;
+      font-size: 1.2rem;
+    }
+
+  }
+
 </style>
 </head>
 <body style="font-family:Arial;">
 
-
+<!-- this is my navigation menu -->
 <section>
   <navigation>
 	<ul>
@@ -61,14 +91,23 @@ li a:hover {
 	</ul>
   </navigation>
 
-
-
-
+  <!-- this is my main text -->
   <div class="main">
   <div style="background-color:white;padding:50px;">
     <h1 style="font-size:45px;"> Roman M. Gutierrez: This is 45px</h1>
     <p style="font-size:30px;">still under construction: this is 30px</p>
     <p1 style="font-size: small;"> this is font size small</p1>
   </div>
+
+  <!-- Mobile version  -->
+  <div class="mobiMain">
+    </div>
+    <div class="mobiDetails">
+      <p>Roman M. Gutierrez</p>
+      <p>u of Missouri</p>
+      <p>ain't no holla back</p>
+    </div>
+    </div>
+
 <body/>
 
