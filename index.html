@@ -2,6 +2,8 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f6f8fa" media="(prefers-color-scheme: light)">
+
 <style>
 * {
   box-sizing: border-box;
@@ -28,25 +30,25 @@ html, body {
   background-color: linear-gradient(to bottom,  #ff7400 0%,#ff7400 100%);
   position: relative;
   top: 300px;
-  font-size: 20px
-}
-li a {
-  display: block;
-  color: white;
-  padding: 8px 16px;
-  text-decoration: none;
+  font-size: 20px;
 }
 
-/* Change the link color on hover */
-li a:hover {
-  background-color: linear-gradient(to bottom,  #ff7400 0%,#ff7400 100%);
-  color: black;
-}
+a.class1 {color:white;}
+a.class1:link  {text-decoration: none; color: white; display: block;}
+a.class1:visited {text-decoration: none; color: white;}
+a.class1:hover {text-decoration: underline; color: black;}
+a.class1:active {text-decoration: none; color: white;}
+
+a.class2 {color:black;}
+a.class2:link {text-decoration: none; color: black;}
+a.class2:visited {text-decoration: none; color: black;}
+a.class2:hover {text-decoration: underline; color: black;}
+a.class2:active {text-decoration: none; color: black;}
 
 .main {
   float: center;
   padding: 0 0px;
-  overflow: hidden;
+  text-align: right;
 }
 
 @media screen and (max-width: 600px) {
@@ -54,29 +56,29 @@ li a:hover {
   #menulist {display: none;}
 }
 
+
 </style>
 </head>
-<body style="font-family:Arial;">
+<body  
+style="font-family:times;">
 
 <!-- this is my navigation menu -->
 <section>
   <div id="menu">
     <ul id="menulist">
-  		<li><a href="#about">ABOUT</a></li>
-  		<li><a href="#cv">CV</a></li>
-  		<li><a href="#pubs">PUBLICATIONS</a></li>
-  		<li><a href="#contact">CONTACt</a></li>
+    	<a href="home" class="class1">about</a>
+        <a href="cv" class="class1">cv</a>
+        <a href="pubs" class="class1">publications</a>
+        <a href="contact" class="class1">contact</a>
     </ul>
   </div>
 
   <!-- this is my main text -->
   <div class="main">
-  <div style="background-color:white;padding:50px;">
-    <h1 style="font-size:45px;"> Roman M. Gutierrez: This is 45px</h1>
-    <p style="font-size:30px;">still under construction: this is 30px</p>
-    <p1 style="font-size: small;"> this is font size small</p1>
+  <div style="background-color:white;padding:70px;">
+    <h1 style="font-size:45px;">Roman M. Gutierrez</h1>
+    <p style="font-size:30px;">hello! i am a graduate student at the university of missouri working with <a href="https://memoryneurolab.org/" class= "class2">jeff johnson</a>. generally, my work focuses on the role of time in episodic memory.</p>
   </div>
 
 
 <body/>
-
