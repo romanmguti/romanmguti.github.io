@@ -1,86 +1,112 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f6f8fa" media="(prefers-color-scheme: light)">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 * {
   box-sizing: border-box;
 }
 
-/* removing border from block of color */
-html, body {
-  margin: 0;
-  padding: 0;
+body {
+  font-family: "Lucida Sans", sans-serif;
+  font-size: 17px;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'menu'
+    'main';
+  background-color: white;
+  gap: 10px;  
+}
 
-/* this adjusts the orange block */
-#menu {
-  float: left;
-  width: 20%;
-  background: linear-gradient(to bottom,  #ff7400 0%,#ff7400 100%);
-  height: 100vh;
+.header {
+  grid-area: header;
+  background-color: purple;
   text-align: center;
+  color: #ffffff;
 }
-/* this moves around the menu options */
-#menulist {
+
+.header > h1 {
+  font-size: 40px;
+}
+
+.menu {
+  grid-area: menu;
+  }
+  
+.menu ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background-color: linear-gradient(to bottom,  #ff7400 0%,#ff7400 100%);
-  position: relative;
-  top: 500px;
-  font-size: 20px;
-  line-height: 170%
 }
 
-
-a.class1 {color:white;}
-a.class1:link  {text-decoration: none; color: white; display: block;}
-a.class1:visited {text-decoration: none; color: white;}
-a.class1:hover {text-decoration: none; color: black;}
-a.class1:active {text-decoration: none; color: white;}
-
-a.class2 {color:black;}
-a.class2:link {text-decoration: none; color: black;}
-a.class2:visited {text-decoration: none; color: black;}
-a.class2:hover {text-decoration: underline; color: black;}
-a.class2:active {text-decoration: none; color: black;}
-
-.main {
-  float: center;
-  padding: 0 0px;
-  text-align: right;
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: #ffffff;
 }
 
-@media screen and (max-width: 600px) {
-  #main {margin-left: 216px;}
-  #menulist {display: none;}
+.menu li:hover {
+  background-color: #0099cc;
+}
+  
+.content {
+  grid-area: main;
 }
 
+.content > h1 {
+  font-size: 30px;
+  margin-bottom: 7px;
+}
 
+.content > p {
+  margin-bottom: 7px;
+}
+
+@media (min-width: 600px) {
+  .header {grid-area: 1 / span 6;}
+  .menu {grid-area: 2 / span 1;}
+  .content {grid-area: 2 / span 4;}
+  .facts {grid-area: 3 / span 6;}
+  .footer {grid-area: 4 / span 6;}
+}
+
+@media (min-width: 768px) {
+  .header {grid-area: 1 / span 6;}
+  .menu {grid-area: 2 / span 1;}
+  .content {grid-area: 2 / span 4;}
+  .facts {grid-area: 2 / span 1;}
+  .footer {grid-area: 3 / span 6;}
+}
 </style>
 </head>
-<body  
-style="font-family:Georgia;">
+<body>
 
-<!-- this is my navigation menu -->
-<section>
-  <div id="menu">
-    <ul id="menulist">
-    	<a style = "display: block"class="class1">about</a>
-        <a style = "display: block"class="class1">cv</a>
-        <a style = "display: block"class="class1"><a href="https://scholar.google.com/citations?user=xt5Um6UAAAAJ&hl=en" class= "class1">publications</a>
-        <a style = "display: block"class="class1"><a href="mailto:rmgz26@umsystem.edu" class= "class1">contact</a>
-    </ul>
-  </div>
+<div class="grid-container">
 
-  <!-- this is my main text -->
-  <div class="main">
-  <div style="background-color:white;padding:70px;">
-    <h1 style="font-size:45px;">Roman M. Gutierrez</h1>
-    <p style="font-size:30px;">hello! i am a graduate student at the university of missouri working with <a href="https://memoryneurolab.org/" class= "class2">jeff johnson</a>. generally, i spend my days thinking about time and episodic memory. </p> 
-  </div>
-<body/>
+<div class="header"><h1>Roman Gutierrez</h1></div>
+
+<div class="menu">
+  <ul>
+    <li>about</li>
+    <li>cv</li>
+    <li>publications</li>
+    <li>contact</li>
+  </ul>
+</div>
+
+<div class="content">
+  <h1>Roman M. Gutierrez</h1>
+
+  <p>hello! i am a graduate student at the university of missouri working with <a href="https://memoryneurolab.org/" class= "class2">jeff johnson</a>. generally, i spend my days thinking about time and episodic memory.</p>
+
+</div>  
+
+</div>
+
+</body>
+</html>
