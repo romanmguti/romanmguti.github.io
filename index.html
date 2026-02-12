@@ -19,28 +19,30 @@ body {
     'menu'
     'main';
   background-color: white;
-  gap: 10px;  
+  gap: 50px;  
 }
 
 .menu {
   grid-area: menu;
   }
-  
+
+/* this moves the entire list */
 .menu ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+	list-style-type: none;
+  	margin-top: 0;
+  	padding: 0;
 }
 
+/* this moves the individual items */
 .menu li {
-  padding: 8px;
-  margin-bottom: 7px;
-  background-color: green;
-  color: white;
+  padding: 5px;
+  margin-bottom: 0;
+  background-color: white;
+  color: black;
 }
 
 .menu li:hover {
-  background-color: white;
+  background-color: green;
 }
   
 .content {
@@ -49,22 +51,37 @@ body {
 
 .content > h1 {
   font-size: 30px;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 }
 
 .content > p {
   margin-bottom: 7px;
 }
 
-@media (min-width: 600px) {
-  .menu {grid-area: 2 / span 1;}
+/* screens less than 767px wont show menu*/
+@media (max-width: 767px) {
+  .menu {display: none;}
   .content {grid-area: 2 / span 4;}
 }
 
+/* screens more than 768px will show menu*/
 @media (min-width: 768px) {
   .menu {grid-area: 2 / span 1;}
   .content {grid-area: 2 / span 4;}
 }
+
+a.class1 {color:black;}
+a.class1:link  {text-decoration: none; color: black; display: block;}
+a.class1:visited {text-decoration: none; color: black;}
+a.class1:hover {text-decoration: none; color: black;}
+a.class1:active {text-decoration: none; color: black;}
+
+
+a.class2 {color:black;}
+a.class2:link {text-decoration: none; color: black;}
+a.class2:visited {text-decoration: none; color: black;}
+a.class2:hover {text-decoration: underline; color: green;}
+a.class2:active {text-decoration: none; color: black;}
 
 </style>
 </head>
@@ -76,15 +93,14 @@ body {
   <ul>
     <li>about</li>
     <li>cv</li>
-    <li>publications</li>
-    <li>contact</li>
+    <li><a href="https://scholar.google.com/citations?user=xt5Um6UAAAAJ&hl=en" class= "class1">publications</a></li>
+    <li><a href="mailto:rmgz26@umsystem.edu" class= "class1">contact</a></li>
   </ul>
 </div>
 
 <div class="content">
   <h1>Roman M. Gutierrez</h1>
-
-  <p>hello! i am a graduate student at the university of missouri working with <a href="https://memoryneurolab.org/">jeff johnson</a>. generally, i spend my days thinking about time and episodic memory.</p>
+  <p>hello! i am a graduate student at the university of missouri working with <a href="https://memoryneurolab.org/" class= "class2">jeff johnson</a>. generally, i spend my days thinking about time and episodic memory.</p>
 
 </div>  
 
